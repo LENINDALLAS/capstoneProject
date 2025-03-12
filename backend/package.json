@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "Lenin Dallas L",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
