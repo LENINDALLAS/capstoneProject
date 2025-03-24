@@ -2,8 +2,9 @@ const BookingsModel = require("../Model/booking.model");
 const showModel = require("../Model/show.model");
 const bookingConfirmationTemplate = require("../templates/bookingConfirmationTemplate");
 const sendEmail = require("../Utils/EmailUtility");
-const stripe = require('stripe')('sk_test_51R3pTx2XhG8Zyja1Fjl1lFHRQPKkF918SaD3umiIVLGiMpZD7SdScbayeg95j7A6BXpTrC1OijEaWkBeZ5aZX68X00xKGv9aXL');
 
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+const stripe = require('stripe')(stripeSecretKey);
 
 
 const makePayment = async (req,res)=>{
